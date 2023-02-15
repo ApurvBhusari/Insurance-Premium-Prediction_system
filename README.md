@@ -8,7 +8,7 @@
 pip install -r requirements.txt
 ```
 
-### Step 2 - Run main.py file
+### Step 2 - Run app.py file
 
 ```bash
 python main.py
