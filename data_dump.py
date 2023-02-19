@@ -4,7 +4,7 @@ import json
 from Insurance_premium.config import mongo_client
 DATA_FILE_PATH="/config/workspace/insurance.csv"
 DATABASE_NAME="Insurance_premium"
-COLLECTION_NAME="ineuron"
+COLLECTION_NAME="expenses"
 
 if __name__=="__main__":
     df = pd.read_csv(DATA_FILE_PATH)
