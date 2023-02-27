@@ -1,0 +1,53 @@
+[ 2023-02-27 23:42:20,342 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-27 23:42:20,343 ] 22 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-02-27 23:42:20,343 ] 21 root - INFO - Reading data from database: Insurance_premium and collection: expenses
+[ 2023-02-27 23:42:20,455 ] 23 root - INFO - Found columns: Index(['_id', 'age', 'sex', 'bmi', 'children', 'smoker', 'region', 'expenses'], dtype='object')
+[ 2023-02-27 23:42:20,455 ] 25 root - INFO - Dropping column: _id 
+[ 2023-02-27 23:42:20,459 ] 27 root - INFO - Row and columns in df: (2676, 7)
+[ 2023-02-27 23:42:20,460 ] 28 root - INFO - Save data in feature store
+[ 2023-02-27 23:42:20,462 ] 34 root - INFO - Create feature store folder if not available
+[ 2023-02-27 23:42:20,462 ] 38 root - INFO - Save df to feature store folder
+[ 2023-02-27 23:42:20,479 ] 43 root - INFO - split dataset into train and test set
+[ 2023-02-27 23:42:20,483 ] 47 root - INFO - create dataset directory folder if not available
+[ 2023-02-27 23:42:20,483 ] 52 root - INFO - Save df to feature store folder
+[ 2023-02-27 23:42:20,497 ] 64 root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/02272023__234220/data_ingestion/feature_store/Insurance_premium.csv', train_file_path='/config/workspace/artifact/02272023__234220/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/02272023__234220/data_ingestion/dataset/test.csv')
+[ 2023-02-27 23:42:20,498 ] 19 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-27 23:42:20,498 ] 107 root - INFO - Reading base dataframe
+[ 2023-02-27 23:42:20,510 ] 110 root - INFO - Replace na value in base df
+[ 2023-02-27 23:42:20,510 ] 112 root - INFO - Drop null values colums from base df
+[ 2023-02-27 23:42:20,515 ] 41 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-27 23:42:20,516 ] 44 root - INFO - Columns to drop: []
+[ 2023-02-27 23:42:20,518 ] 115 root - INFO - Reading train dataframe
+[ 2023-02-27 23:42:20,528 ] 117 root - INFO - Reading test dataframe
+[ 2023-02-27 23:42:20,535 ] 120 root - INFO - Drop null values colums from train df
+[ 2023-02-27 23:42:20,539 ] 41 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-27 23:42:20,540 ] 44 root - INFO - Columns to drop: []
+[ 2023-02-27 23:42:20,542 ] 122 root - INFO - Drop null values colums from test df
+[ 2023-02-27 23:42:20,544 ] 41 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-27 23:42:20,546 ] 44 root - INFO - Columns to drop: []
+[ 2023-02-27 23:42:20,559 ] 131 root - INFO - Is all required columns present in train df
+[ 2023-02-27 23:42:20,559 ] 133 root - INFO - Is all required columns present in test df
+[ 2023-02-27 23:42:20,559 ] 137 root - INFO - As all column are available in train df hence detecting data drift
+[ 2023-02-27 23:42:20,560 ] 85 root - INFO - Hypothesis age: float64, float64 
+[ 2023-02-27 23:42:20,562 ] 85 root - INFO - Hypothesis sex: object, object 
+[ 2023-02-27 23:42:20,567 ] 85 root - INFO - Hypothesis bmi: float64, float64 
+[ 2023-02-27 23:42:20,569 ] 85 root - INFO - Hypothesis children: float64, float64 
+[ 2023-02-27 23:42:20,571 ] 85 root - INFO - Hypothesis smoker: object, object 
+[ 2023-02-27 23:42:20,576 ] 85 root - INFO - Hypothesis region: object, object 
+[ 2023-02-27 23:42:20,582 ] 85 root - INFO - Hypothesis expenses: float64, float64 
+[ 2023-02-27 23:42:20,584 ] 140 root - INFO - As all column are available in test df hence detecting data drift
+[ 2023-02-27 23:42:20,584 ] 85 root - INFO - Hypothesis age: float64, float64 
+[ 2023-02-27 23:42:20,585 ] 85 root - INFO - Hypothesis sex: object, object 
+[ 2023-02-27 23:42:20,588 ] 85 root - INFO - Hypothesis bmi: float64, float64 
+[ 2023-02-27 23:42:20,590 ] 85 root - INFO - Hypothesis children: float64, float64 
+[ 2023-02-27 23:42:20,592 ] 85 root - INFO - Hypothesis smoker: object, object 
+[ 2023-02-27 23:42:20,594 ] 85 root - INFO - Hypothesis region: object, object 
+[ 2023-02-27 23:42:20,598 ] 85 root - INFO - Hypothesis expenses: float64, float64 
+[ 2023-02-27 23:42:20,599 ] 144 root - INFO - Write reprt in yaml file
+[ 2023-02-27 23:42:20,615 ] 149 root - INFO - Data validation artifact: DataValidationArtifact(report_file_path='/config/workspace/artifact/02272023__234220/data_validation/report.yaml')
+[ 2023-02-27 23:42:20,616 ] 27 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Transformation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-27 23:43:50,987 ] 55 root - INFO - Entered the save_object method of utils
+[ 2023-02-27 23:43:50,993 ] 59 root - INFO - Exited the save_object method of utils
+[ 2023-02-27 23:43:50,994 ] 55 root - INFO - Entered the save_object method of utils
+[ 2023-02-27 23:43:50,995 ] 59 root - INFO - Exited the save_object method of utils
+[ 2023-02-27 23:43:57,288 ] 125 root - INFO - Data transformation object DataTransformationArtifact(transform_object_path='/config/workspace/artifact/02272023__234220/data_transformation/transformer/transformer.pkl', transformed_train_path='/config/workspace/artifact/02272023__234220/data_transformation/transformed/train.npz', transformed_test_path='/config/workspace/artifact/02272023__234220/data_transformation/transformed/test.npz', target_encoder_path='/config/workspace/artifact/02272023__234220/data_transformation/target_encoder/target_encoder.pkl')

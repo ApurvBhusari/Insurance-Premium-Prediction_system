@@ -1,0 +1,27 @@
+[ 2023-02-21 12:39:36,214 ] 15 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Ingestion <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-21 12:39:36,214 ] 22 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-02-21 12:39:36,214 ] 21 root - INFO - Reading data from database: Insurance_premium and collection: expenses
+[ 2023-02-21 12:39:36,276 ] 23 root - INFO - Found columns: Index(['_id', 'age', 'sex', 'bmi', 'children', 'smoker', 'region', 'expenses'], dtype='object')
+[ 2023-02-21 12:39:36,277 ] 25 root - INFO - Dropping column: _id 
+[ 2023-02-21 12:39:36,278 ] 27 root - INFO - Row and columns in df: (1338, 7)
+[ 2023-02-21 12:39:36,278 ] 28 root - INFO - Save data in feature store
+[ 2023-02-21 12:39:36,278 ] 34 root - INFO - Create feature store folder if not available
+[ 2023-02-21 12:39:36,279 ] 38 root - INFO - Save df to feature store folder
+[ 2023-02-21 12:39:36,285 ] 43 root - INFO - split dataset into train and test set
+[ 2023-02-21 12:39:36,287 ] 47 root - INFO - create dataset directory folder if not available
+[ 2023-02-21 12:39:36,287 ] 52 root - INFO - Save df to feature store folder
+[ 2023-02-21 12:39:36,294 ] 64 root - INFO - Data ingestion artifact: DataIngestionArtifact(feature_store_file_path='/config/workspace/artifact/02212023__123936/data_ingestion/feature_store/Insurance_premium.csv', train_file_path='/config/workspace/artifact/02212023__123936/data_ingestion/dataset/train.csv', test_file_path='/config/workspace/artifact/02212023__123936/data_ingestion/dataset/test.csv')
+[ 2023-02-21 12:39:36,294 ] 20 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Validation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-21 12:39:36,294 ] 108 root - INFO - Reading base dataframe
+[ 2023-02-21 12:39:36,299 ] 111 root - INFO - Replace na value in base df
+[ 2023-02-21 12:39:36,299 ] 113 root - INFO - Drop null values colums from base df
+[ 2023-02-21 12:39:36,300 ] 42 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-21 12:39:36,301 ] 45 root - INFO - Columns to drop: []
+[ 2023-02-21 12:39:36,301 ] 116 root - INFO - Reading train dataframe
+[ 2023-02-21 12:39:36,304 ] 118 root - INFO - Reading test dataframe
+[ 2023-02-21 12:39:36,306 ] 121 root - INFO - Drop null values colums from train df
+[ 2023-02-21 12:39:36,308 ] 42 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-21 12:39:36,308 ] 45 root - INFO - Columns to drop: []
+[ 2023-02-21 12:39:36,309 ] 123 root - INFO - Drop null values colums from test df
+[ 2023-02-21 12:39:36,310 ] 42 root - INFO - selecting column name which contains null above to 0.2
+[ 2023-02-21 12:39:36,310 ] 45 root - INFO - Columns to drop: []
