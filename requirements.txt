@@ -18,4 +18,9 @@ PyYAML
 numpy
 scikit-learn
 apache-airflow
+seaborn
+matplotlib
+streamlit
+xgboost
+python==3.9
 -e .

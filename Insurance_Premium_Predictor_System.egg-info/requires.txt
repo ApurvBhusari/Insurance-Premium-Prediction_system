@@ -6,6 +6,7 @@ dnspython==2.2.1
 fastapi==0.78.0
 httptools==0.5.0
 imblearn==0.0
+matplotlib
 mypy-boto3-s3==1.24.76
 numpy
 pandas
@@ -13,8 +14,11 @@ pip-chill==1.0.1
 pymongo==4.2.0
 python-dotenv==0.21.0
 scikit-learn
+seaborn
+streamlit
 types-s3transfer==0.6.0.post4
 uvicorn==0.18.3
 watchfiles==0.17.0
 websockets==10.3
 wincertstore==0.2
+xgboost
