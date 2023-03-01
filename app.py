@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-import pickle
+import pickle 
 import xgboost as xg
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 
-model = pickle.load(open('/config/workspace/saved_models/0/model/model.pkl','rb'))
-encoder = pickle.load(open('/config/workspace/saved_models/0/target_encoder/target_encoder.pkl','rb'))
-transformer = pickle.load(open('/config/workspace/saved_models/0/transformer/transformer.pkl','rb'))
+model = pickle.load(open('model_final.pkl','rb'))
+encoder = pickle.load(open('target_encoder.pkl','rb'))
+transformer = pickle.load(open('transformer.pkl','rb'))
 
 
 st.title("Insurance Premium Prediction System")
